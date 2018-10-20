@@ -13,7 +13,8 @@ function Contact(props) {
 }
 
 Contact.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  breed: PropTypes.string.isRequired
 };
 
 export default Contact;
