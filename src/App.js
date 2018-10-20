@@ -19,7 +19,7 @@ class App extends Component {
       .get("https://jsonplaceholder.typicode.com/users")
       .then(response => {
 
-        // create an array of contacts only with relevant data
+        // Crea un arreglo de elementos en el cual se recibiran los datos
         const newContacts = response.data.map(c => {
           return {
             id: c.id,
@@ -27,13 +27,14 @@ class App extends Component {
           };
         });
 
-        // create a new "State" object without mutating 
-        // the original State object. 
+        // Crea una nuevo obteto de tipo "State" el cual puede mutar
+        // y recibir el arreglo de elementos
         const newState = Object.assign({}, this.state, {
           contacts: newContacts
         });
 
-        // store the new state object in the component's state
+        // Almacenar en el store el nuevo valor del objeto state
+        // y asigarnlo al componente state
         this.setState(newState);
       })
       .catch(error => console.log(error));
@@ -42,10 +43,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
+
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Lusta de contactos desde una API</h1>
+          <h1 className="App-title">Petición GET desde una API</h1>
         </header>
 
         <ContactList contacts={this.state.contacts} />
