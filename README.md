@@ -9,7 +9,7 @@ Tener instalado lo siguiente
 
 Una vez instalado
 
-Clonar el repositorio (https://github.com/forozco/ejemploClase.git)
+Clonar el repositorio (git clone https://github.com/forozco/ejemploClase.git)
 
 Navegar hacia el la carpeta generada:
 

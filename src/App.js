@@ -29,12 +29,14 @@ class App extends Component {
 
         // Crea una nuevo obteto de tipo "State" el cual puede mutar
         // y recibir el arreglo de elementos
+
         const newState = Object.assign({}, this.state, {
           contacts: newContacts
         });
 
         // Almacenar en el store el nuevo valor del objeto state
         // y asigarnlo al componente state
+
         this.setState(newState);
       })
       .catch(error => console.log(error));
@@ -46,7 +48,7 @@ class App extends Component {
 
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Petición GET desde una API</h1>
+          <h1 className="App-title">Lsta de contactos desde una API</h1>
         </header>
 
         <ContactList contacts={this.state.contacts} />
